@@ -21,18 +21,6 @@ let contact = document.querySelector('#contact');
 let about = document.querySelector('#about');
 main.insertBefore(about, contact);
 
-//Each section should have a h2 tag at the top with corresponding text 
-//according to its id
-
-let headerAbout = document.createElement('h2');
-let headerText = document.createTextNode('About');
-headerAbout.appendChild(headerText);
-main.insertBefore(headerAbout, about);
-
-let headerContact = document.createElement('h2');
-let headerText2 = document.createTextNode('Contact');
-headerContact.appendChild(headerText2);
-main.insertBefore(headerContact, contact);
 
 //The text "We're the best in fruits & vegetables" under #about should be 
 //wrapped in a p tag
@@ -42,6 +30,21 @@ let p = document.createElement('p');
 p.textContent = "We're the best in fruits & vegetables";
 let pText = document.querySelector('#about');
 pText.appendChild(p);
+
+//Each section should have a h2 tag at the top with corresponding text 
+//according to its id
+
+let headerAbout = document.createElement('h2');
+let headerText = document.createTextNode('About');
+headerAbout.appendChild(headerText);
+about.insertBefore(headerAbout, p);
+
+let p2 = document.querySelector('#contact p')
+
+let headerContact = document.createElement('h2');
+let headerText2 = document.createTextNode('Contact');
+headerContact.appendChild(headerText2);
+contact.insertBefore(headerContact, p2);
 
 //The developer used td elements in thead instead of th . Fix it.
 
